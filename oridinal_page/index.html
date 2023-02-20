@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>記念日 ホームページ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="ここにサイト説明を入れます">
+    <meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+    <link rel="stylesheet" href="css/style-top.css">
+    <script src="js/openclose.js"></script>
+
+    <script type="text/javascript">
+        function gate(){
+           // ▼ユーザの入力を求める
+           var UserInput = prompt("パスワードを入力して下さい（ヒント：記念日 XXXX）","");
+           // ▼入力内容をチェック
+           if( /\W+/g.test(UserInput) ) {
+              // ▼半角英数字以外の文字が存在したらエラー
+              alert("半角数字のみを入力して下さい。");
+           }
+           // ▼キャンセルをチェック
+           else if( UserInput != null ) {
+              // ▼入力内容からファイル名を生成して移動
+              location.href = UserInput + ".html";
+           }
+        }
+        </script>
+
+</head>
+
+<body>
+
+    <header>
+        <input type="button" value="パスワードを入力して秘密のページへアクセスする" onclick="gate();">
+    </header>
+
+    <nav id="menubar">
+    </nav>
+
+    <footer>
+        <small>Copyright&copy; <a href="0221.html">Daiki-Aoi</a> All Rights Reserved.</small>
+    </footer>
+
+    <!--背景スライドショー-->
+    <aside id="mainimg">
+        <!-- <div class="slide0">slide0</div> -->
+        <div class="slide1">slide1</div>
+        <div class="slide2">slide2</div>
+        <div class="slide3">slide3</div>
+    </aside>
+
+</body>
+
+</html>
